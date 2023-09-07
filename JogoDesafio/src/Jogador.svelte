@@ -6,6 +6,7 @@
     <main id="main-container">
         <section id="soccer-game">
             <form on:submit={gol}>
+                <h1>Svelte Soccer Minigame</h1>
                 <div class="input-box">
                     <label for="name"> Digite seu nome </label>
                     <div id="input-field">
@@ -25,8 +26,10 @@
             <div id="infos" class="hidden">
                 <h1>Exibindo informações dos seus Gols!</h1>
                 <div id="result">
-                    <span>Seus Gols:</span>
-                    <span id="gols" />
+                    <div id="gol-scores">
+                        <span>Seus Gols:</span>
+                        <span id="gols" />
+                    </div>
                 </div>
                 <div id="description">
                     <span />
