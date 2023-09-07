@@ -1,21 +1,24 @@
 <script>
 	import Jogador from "./Jogador.svelte";
 	// Importando dependência externa Howler, para permitir som no navegador
-	import { Howl } from "howler";
+	import { Howl, Howler } from "howler";
 
-	// Criando um objeto de som com o arquivo baixado
-	const golSound = new Howl({
-		src: ["sound/acabou-acabou-e-tetra-e-teeetraaa.mp3"]
-	});
+	function marcaGol() {
+		console.log("Marcou 1 Gol!");
+	}
 
-	function marcaGol(){
-		console.log("Marcou 1 Gol!")
+	function handleGol() {
+		const sound = new Howl({
+			src: ["sounds/tetra.mp3"],
+		});
 
-		golSound.play();
+		marcaGol();
+		sound.play();
+		console.log("Playing tetra.mp3");
 	}
 </script>
 
 <main>
 	<h1>Exibindo informação quando marca Gol!</h1>
-	<Jogador gol = {marcaGol} />
+	<Jogador gol={handleGol} />
 </main>
