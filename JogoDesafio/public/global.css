@@ -122,6 +122,10 @@ button {
   cursor: pointer; /* Transforma o cursor em um ponteiro quando passa sobre o botão */
 }
 
+#input-field i {
+  color: rgba(215, 43, 158);
+}
+
 button:hover {
   background-color: chartreuse;
 }
