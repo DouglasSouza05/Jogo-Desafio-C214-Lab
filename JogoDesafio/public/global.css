@@ -1,203 +1,144 @@
-html,
-body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-body {
-	color: #333;
-	margin: 0;
-	padding: 8px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-
-a {
-	color: rgb(0, 100, 200);
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(0, 80, 160);
-}
-
-label {
-	display: block;
-}
-
-input,
-button,
-select,
-textarea {
-	font-family: inherit;
-	font-size: inherit;
-	-webkit-padding: 0.4em 0;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
-}
-
-input:disabled {
-	color: #ccc;
-}
-
-button {
-	color: #333;
-	background-color: #f4f4f4;
-	outline: none;
-}
-
-button:disabled {
-	color: #999;
-}
-
-button:not(:disabled):active {
-	background-color: #ddd;
-}
-
-button:focus {
-	border-color: #666;
-}
-
 * {
-	font-family: "Poppins", "sans-serif";
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	overflow: auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 140vh;
-	width: 98vw;
-	background: linear-gradient(90deg, rgba(215, 43, 158) 0%, #00ffff);
-}
-
-/* Para id usa-se "#" */
-#main_container {
-	display: flex;
-	align-items: center;
-	gap: 3.5rem;
-	border-radius: 8px;
-	max-height: calc(100vh - 80px);
-	/* 80px para acomodar o padding */
-	/* overflow: auto; */
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 98vw;
+  background: linear-gradient(90deg, rgba(215, 43, 158) 0%, #00ffff);
 }
 
 #image img {
-	width: 40vi;
+  width: 40vi;
+  margin-right: 15px; /* Adicione margem à direita da imagem */
 }
 
 #soccer-game {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	padding: 2rem;
-	background-color: #262626;
-	border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #262626;
+  border-radius: 8px;
 }
 
-#title {
-	font-size: 2.25rem;
-	position: relative;
-	color: rgba(215, 43, 158);
+h1 {
+  font-size: 2.25rem;
+  position: relative;
+  color: rgba(215, 43, 158);
+  margin-bottom: 0.8rem;
 }
 
-#title::after {
-	position: absolute;
-	content: "";
-	background-color: #00ffff;
-	width: 8rem;
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	border-radius: 3px;
+h1::after {
+  position: absolute;
+  content: "";
+  background-color: #00ffff;
+  width: 8rem;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
 }
 
 /* Para class usa-se "." */
 .input-box label {
-	font-size: 1.1rem;
-	color: #00ffff;
-	font-weight: 400;
+  font-size: 1.5rem;
+  color: #00ffff;
+  font-weight: 400;
 }
 
 .input-field {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #3f3f46;
-	padding: 0.3rem;
-	border-radius: 3px;
-	margin-top: 3px;
-}
-
-.input-field span,
-.input-field i {
-	color: rgba(215, 43, 158);
-	font-size: 1.3rem;
-	padding: 0.6rem 1rem;
-}
-
-.input-field input {
-	background-color: transparent;
-	border: none;
-	width: 100%;
-	font-size: 1.3rem;
-	color: #f8fafc;
-	padding: 0 0.5rem;
-	cursor: pointer;
-}
-
-.input-field input::-webkit-outer-spin-button,
-.input-field input::-webkit-inner-spin-button {
-	appearance: none;
-}
-
-.input-field input:focus {
-	outline: none;
-}
-
-#result {
-	display: flex;
-	gap: 2rem;
-	align-items: center;
-	border-top: 1px solid #00ffff;
-	padding: 0.75rem 0;
-}
-
-#gol-scores {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	font-size: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f3f46;
 }
 
 #gol-scores span:first-child {
-	margin-top: 0.7rem;
-	margin-bottom: 0.5rem;
-	font-size: 1.5rem;
-	color: #00ffff;
+  font-size: 1.5rem;
+  color: #00ffff;
+  font-weight: 500;
+}
+
+#result {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* ##################################################################################### */
+
+/* Estilizando o local onde você entra com o nome */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhando o texto à esquerda */
+  gap: 0.5rem; /* Espaçamento entre o label e o input */
+  margin-bottom: 1rem;
+}
+
+.input-box label {
+  margin-top: 0.3rem;
+  font-size: 1.5rem;
+  color: #00ffff;
+  font-weight: 500;
+  margin-bottom: 0.2rem; /* Espaçamento entre o label e o input */
+}
+
+#input-field {
+  background-color: #3f3f46;
+  border-radius: 4px; /* Adicionando uma borda arredondada */
+  padding: 0.5rem 1rem; /* Espaçamento interno para o input */
+}
+
+#name {
+  border: none;
+  background-color: transparent; /* Removendo o fundo do input */
+  color: #fff; /* Cor do texto */
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#name:focus {
+  outline: none; /* Remove a borda de foco */
+}
+
+/* Estilizando o botão */
+button {
+  background-color: rgba(215, 43, 158);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 0.5rem 1rem; /* Espaçamento interno para o botão */
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer; /* Transforma o cursor em um ponteiro quando passa sobre o botão */
+}
+
+button:hover {
+  background-color: chartreuse;
+}
+
+/* ##################################################################################### */
+
+#gols {
+  font-size: 1.4rem;
+  color: rgba(215, 43, 158);
 }
 
 #description {
-	flex: 0.94;
-	text-align: center;
-	justify-content: center;
-	font-size: 1.5rem;
-	width: 15.5rem;
-	color: rgba(215, 43, 158);
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  color: chartreuse;
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
